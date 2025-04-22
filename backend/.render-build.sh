@@ -3,8 +3,17 @@
 set -o errexit
 
 npm install
-# verify that middlewares directory exists
-if [ ! -d "middlewares" ]; then
-    echo "Error: middlewares directory not found!"
+
+# Verify directory structure
+if [ ! -d "Middlewares" ]; then
+    echo "Error: Middlewares directory not found!"
     exit 1
-fi 
+fi
+
+# Verify auth.middleware.js exists
+if [ ! -f "Middlewares/auth.middleware.js" ]; then
+    echo "Error: Middlewares/auth.middleware.js not found!"
+    exit 1
+fi
+
+echo "Build verification successful!" 
