@@ -15,6 +15,7 @@ connectToDb();
 // CORS configuration
 const allowedOrigins = [
   'http://localhost:5173',
+  'http://localhost:5174',
   'https://gantabya-rides-nepal.vercel.app',
   'https://gantabya-rides-nepal.onrender.com'
 ];
@@ -32,19 +33,21 @@ const corsOptions = {
   },
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization']
+  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
+  exposedHeaders: ['Set-Cookie'],
+  maxAge: 86400 // 24 hours
 };
 
 app.use(cors(corsOptions));
-
 app.use(cookie());  
+app.use(express.json());
+
 app.get('/health',(req,res)=>{
     res.json({
         code:null,
         status:'SUCCESS'
     })
 })
-app.use(express.json());
 
 app.use('/users',userRoutes)
 app.use('/captains',CaptainRoutes);

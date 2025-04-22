@@ -1,5 +1,15 @@
 {
+  "name": "gantabya-rides-nepal",
+  "version": "1.0.0",
+  "description": "Gantabya Rides Nepal - Full Stack Application",
+  "scripts": {
+    "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
+    "start:backend": "cd backend && npm run dev",
+    "start:frontend": "cd frontend && npm run dev",
+    "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install"
+  },
   "dependencies": {
+    "concurrently": "^8.2.2",
     "leaflet": "^1.9.4",
     "react-leaflet": "^5.0.0"
   }

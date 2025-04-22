@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: gantabya-rides-backend
+    env: node
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3000
+      - key: DB_CONNECT
+        fromDatabase:
+          name: gantabya-db
+          property: connectionString
+      - key: JWT_SECRET
+        generateValue: true
+      - key: CORS_ORIGIN
+        value: https://gantabya-rides-nepal.vercel.app
+      - key: FRONTEND_URL
+        value: https://gantabya-rides-nepal.vercel.app 

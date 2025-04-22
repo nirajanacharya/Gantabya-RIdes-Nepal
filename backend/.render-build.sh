@@ -3,6 +3,7 @@
 set -o errexit
 
 npm install
+npm install -g nodemon
 
 # Verify directory structure
 if [ ! -d "Middlewares" ]; then

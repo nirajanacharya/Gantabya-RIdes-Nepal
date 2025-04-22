@@ -72,8 +72,7 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact Us</h4>
             <ul className="space-y-2">
-              <li className="text-blue-200">Email: support@gantabya.com</li>
-              <li className="text-blue-200">Phone: +1 234 567 890</li>
+              <li className="text-blue-200">Email:nirajan@gmail.com</li>
               <li className="text-blue-200">Address: Kathmandu, Nepal</li>
             </ul>
           </div>
