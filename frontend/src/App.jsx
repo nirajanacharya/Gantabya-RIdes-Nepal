@@ -4,7 +4,7 @@ import { Toaster } from 'react-hot-toast';
 import Captainlogin from "./pages/Captainlogin";
 import CaptainSignup from "./pages/CaptainSignup";
 import UserSignup from "./pages/UserSignup";
-import Userlogin from "./pages/Userlogin";
+import UserLogin from "./pages/UserLogin";
 import Start from "./pages/Start";
 import Home from "./pages/Home";
 import UserProtectWrapper from "./pages/UserProtectWrapper";
@@ -25,7 +25,7 @@ const App = () => {
           <Route path="/" element={<Start />} />
           <Route path="/captain-login" element={<Captainlogin />} />
           <Route path="/captain-signup" element={<CaptainSignup />} />
-          <Route path="/login" element={<Userlogin />} />
+          <Route path="/login" element={<UserLogin />} />
           <Route path='/riding' element={<Riding/>} />
           <Route path="/signup" element={<UserSignup />} />
           <Route path='/captain-riding' element={<CaptainRiding/>} />
